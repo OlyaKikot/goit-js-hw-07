@@ -9,9 +9,10 @@ const ingredients = [
   ];
 
   const ingredientsEl = document.querySelector('#ingredients');
-//   const ingredientsItemEl = document.createElement('li');
-//   ingredientsItemEl.textContent = `ингридиент ${ingredients[0]}`;
-//   console.log(ingredientsItemEl);
+  const listEl =(ingredients.map(element =>{
+    const ingredientsItemEl = document.createElement('li');
+    ingredientsItemEl.textContent = `${element}`;
+   return ingredientsItemEl;
+  }));
 
-const elements = ingredients.map(makeItemElement);
-
+  ingredientsEl.append(...listEl);
