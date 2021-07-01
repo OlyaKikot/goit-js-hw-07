@@ -1,11 +1,11 @@
-const refs ={
-    input: document.querySelector('#name-input'),
-    name: document.querySelector('#name-output')
-}
+const refs = {
+  input: document.querySelector('#name-input'),
+  name: document.querySelector('#name-output'),
+};
 
-refs.input.addEventListener( 'input', onInputChange);
+refs.input.addEventListener('input', onInputChange);
 
-function onInputChange (event) {
- refs.name.textContent = event.currentTarget.value === '' ? 'незнакомец' : event.currentTarget.value;
-
+function onInputChange(event) {
+  refs.name.textContent =
+    event.currentTarget.value === '' ? 'незнакомец' : event.currentTarget.value;
 }
